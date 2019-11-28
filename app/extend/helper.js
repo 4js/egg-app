@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  getTimestamp() {
+  getTimestamp(userId) {
     // 时间戳
-    return new Date().getTime();
+    return userId + '_' + new Date().getTime();
   },
 };
