@@ -10,4 +10,5 @@ module.exports = app => {
   router.post('/user/login', controller.user.login);
   router.get('/order/list', controller.order.list);
   router.get('/product', controller.product.list);
+  router.get('/tail', controller.tail.list);
 };
