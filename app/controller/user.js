@@ -9,7 +9,6 @@ class UserController extends Controller {
    * @param {username} 用户名/手机号
    * @param {password} 密码/md5加密
    */
-
   async register() {
     const { ctx } = this;
     const { username, password } = ctx.request.body;
@@ -24,7 +23,6 @@ class UserController extends Controller {
    * @param {username} 用户名/手机号
    * @param {password} 密码/md5加密
    */
-
   async login() {
     const { ctx } = this;
     const { username, password } = ctx.request.body;

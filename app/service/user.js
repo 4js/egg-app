@@ -9,7 +9,6 @@ class UserService extends Service {
    * @param {String} 用户名/手机号
    * @param {String} 密码 md5加密
    */
-
   async register(username, password) {
     const { ctx, app } = this;
     const user = await app.model.User.findOne({ where: { username } });
@@ -23,7 +22,6 @@ class UserService extends Service {
    * @param {String} 用户名/手机号
    * @param {String} 密码 md5加密
    */
-
   async login(username, password) {
     const { ctx, app } = this;
     const user = await app.model.User.findOne({ where: { username } });
@@ -34,6 +32,7 @@ class UserService extends Service {
     const createToken = ctx.helper.getTimestamp(user.user_id);
     return { message: '登录成功', data: { user, token: createToken } };
   }
+  
 }
 
 module.exports = UserService;

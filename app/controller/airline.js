@@ -2,18 +2,18 @@
 
 const Controller = require('egg').Controller;
 
-class ProductController extends Controller {
+class AirlineController extends Controller {
 
   /**
-   * 获取所有产品列表
+   * 查询航线列表
    * @method {get}
    */
   async list() {
     const { ctx } = this;
-    const result = await ctx.service.product.list();
+    const result = await ctx.service.airline.list();
     ctx.body = result;
   }
-  
+
 }
 
-module.exports = ProductController;
+module.exports = AirlineController;

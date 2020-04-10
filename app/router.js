@@ -12,6 +12,7 @@ module.exports = app => {
   router.post('/city/add', controller.city.add);
   router.get('/plane/list', controller.plane.list);
   router.post('/plane/add', controller.plane.add);
+  router.get('/airline/list', controller.airline.list);
   router.get('/order/list', controller.order.list);
   router.get('/product', controller.product.list);
   router.get('/tail', controller.tail.list);
